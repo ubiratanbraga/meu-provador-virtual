@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Zap, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import ResultCard from "@/components/ResultCard";
 
 const Index = () => {
   const [userPhoto, setUserPhoto] = useState<File | null>(null);
@@ -116,7 +117,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
             <div className="animate-scale-in">
               <UploadCard
                 title="Sua Foto"
@@ -133,9 +134,12 @@ const Index = () => {
                 onImageSelect={setClothingPhoto}
               />
             </div>
+            <div className="animate-scale-in" style={{ animationDelay: '0.4s' }}>
+              <ResultCard />
+            </div>
           </div>
 
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <Button
               variant="hero"
               size="lg"
