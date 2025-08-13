@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
@@ -47,7 +48,7 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <div
               key={plan.title}
-              className={`relative rounded-2xl p-8 transition-all duration-300 hover:shadow-elegant animate-scale-in ${
+              className={`relative rounded-2xl p-8 transition-all duration-300 hover:shadow-elegant animate-scale-in flex flex-col ${
                 plan.popular
                   ? 'bg-gradient-card border-2 border-primary shadow-soft'
                   : 'bg-background border border-border shadow-soft'
@@ -72,7 +73,7 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
