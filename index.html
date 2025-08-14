@@ -1,30 +1,250 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Provador - Experimente Roupas Virtualmente</title>
-    <meta name="description" content="Descubra como suas roupas ficam em você antes mesmo de vestir. Tecnologia de IA para o futuro da moda. Teste virtual de roupas rápido e seguro." />
-    <meta name="keywords" content="provador virtual, teste de roupas, IA, moda, tecnologia, roupas virtuais" />
-    <meta name="author" content="Meu Provador" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provador Virtual - Experimente roupas virtualmente</title>
+    <meta name="description" content="Descubra como suas roupas ficam em você antes mesmo de vestir. Tecnologia de IA para o futuro da moda.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 5.16-1 9-5.45 9-11V7l-10-5z"/>
+                </svg>
+                <span class="logo-text">ProvadorVirtual</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#inicio">Início</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#precos">Preços</a>
+            </nav>
+        </div>
+    </header>
 
-    <meta property="og:title" content="Meu Provador - Experimente Roupas Virtualmente" />
-    <meta property="og:description" content="Descubra como suas roupas ficam em você antes mesmo de vestir. Tecnologia de IA para o futuro da moda." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Experimente roupas 
+                        <span class="gradient-text">virtualmente</span>
+                    </h1>
+                    <p class="hero-description">
+                        Descubra como suas roupas ficam em você antes mesmo de vestir. 
+                        Tecnologia de IA para o futuro da moda.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Começar Agora</button>
+                        <button class="btn btn-outline">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="src/assets/hero-image.jpg" alt="Mulher experimentando roupas virtualmente" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                        </svg>
+                    </div>
+                    <h3>IA Avançada</h3>
+                    <p>Tecnologia de última geração para resultados realistas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                        </svg>
+                    </div>
+                    <h3>Resultado Instantâneo</h3>
+                    <p>Veja como a roupa fica em você em segundos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                        </svg>
+                    </div>
+                    <h3>100% Seguro</h3>
+                    <p>Suas fotos são processadas com total privacidade</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    <!-- Upload Section -->
+    <section id="como-funciona" class="upload-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Funciona?</h2>
+                <p>Em apenas 3 passos simples, você pode ver como qualquer roupa fica em você</p>
+            </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+            <div class="upload-grid">
+                <!-- User Photo Card -->
+                <div class="upload-card">
+                    <h3>Sua Foto</h3>
+                    <p>Faça upload de uma foto sua de corpo inteiro</p>
+                    <div class="upload-area" id="user-upload">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <p>Clique para fazer upload</p>
+                        <input type="file" accept="image/*" id="user-file" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- Clothing Photo Card -->
+                <div class="upload-card">
+                    <h3>Peça de Roupa</h3>
+                    <p>Selecione a roupa que deseja experimentar</p>
+                    <div class="upload-area" id="clothing-upload">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 2h12l-1 7H7L6 2Z"/>
+                            <path d="M19 9v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9"/>
+                            <path d="M8 9v-1a2 2 0 0 1 4 0v1"/>
+                        </svg>
+                        <p>Clique para fazer upload</p>
+                        <input type="file" accept="image/*" id="clothing-file" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- Result Card -->
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                        </svg>
+                    </div>
+                    <h3>Resultado</h3>
+                    <p>Aqui aparecerá como a roupa fica em você</p>
+                    <div class="result-preview">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                        </svg>
+                        <p>Resultado aparecerá aqui</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-button-container">
+                <button id="test-button" class="btn btn-primary btn-stars" disabled>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                    </svg>
+                    Testar Agora
+                </button>
+                <p id="upload-message" class="upload-message">Selecione ambas as imagens para começar o teste</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precos" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Escolha seu Plano</h2>
+                <p>Encontre o plano perfeito para suas necessidades</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Gratuito</h3>
+                    <div class="price">R$ 0<span>/mês</span></div>
+                    <ul>
+                        <li>5 testes por mês</li>
+                        <li>Qualidade básica</li>
+                        <li>Suporte por email</li>
+                    </ul>
+                    <button class="btn btn-outline">Começar Grátis</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Mais Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">R$ 29<span>/mês</span></div>
+                    <ul>
+                        <li>Testes ilimitados</li>
+                        <li>Qualidade HD</li>
+                        <li>Suporte prioritário</li>
+                        <li>Integração com lojas</li>
+                    </ul>
+                    <button class="btn btn-primary">Escolher Pro</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">R$ 99<span>/mês</span></div>
+                    <ul>
+                        <li>Tudo do Pro</li>
+                        <li>API personalizada</li>
+                        <li>White label</li>
+                        <li>Suporte dedicado</li>
+                    </ul>
+                    <button class="btn btn-outline">Contatar Vendas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 5.16-1 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                    <span>ProvadorVirtual</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Produto</h4>
+                        <ul>
+                            <li><a href="#como-funciona">Como Funciona</a></li>
+                            <li><a href="#precos">Preços</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">Central de Ajuda</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacidade</a></li>
+                            <li><a href="#">Termos</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProvadorVirtual. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
