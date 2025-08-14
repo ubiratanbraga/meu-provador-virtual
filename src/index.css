@@ -115,3 +115,34 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .btn-stars {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--primary-foreground)), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--primary-foreground)), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--primary-foreground)), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsl(var(--primary-foreground)), transparent),
+      radial-gradient(2px 2px at 160px 30px, hsl(var(--primary-foreground)), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: stars 3s ease-in-out infinite;
+    opacity: 0.4;
+  }
+
+  .btn-stars > * {
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -144,7 +144,7 @@ const Index = () => {
               variant="hero"
               size="lg"
               onClick={handleTest}
-              className="text-lg px-12 py-6"
+              className="text-lg px-12 py-6 btn-stars"
               disabled={!userPhoto || !clothingPhoto}
             >
               <Sparkles className="mr-2 h-5 w-5" />
