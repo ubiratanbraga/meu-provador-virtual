@@ -656,6 +656,24 @@ body {
 }
 
 /* Responsive Design */
+/* Tablet and smaller desktop - Center result card */
+@media (max-width: 1024px) {
+    .upload-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        justify-items: center;
+    }
+    
+    /* Target the third card (result card) */
+    .upload-grid > *:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+/* Mobile layout */
 @media (max-width: 768px) {
     .hero-content {
         grid-template-columns: 1fr;
@@ -672,6 +690,14 @@ body {
     
     .upload-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center;
+    }
+    
+    /* Target the result card for mobile - make it smaller and centered */
+    .upload-grid > *:nth-child(3) {
+        max-width: 350px;
+        width: 100%;
     }
     
     .footer-content {
